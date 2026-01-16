@@ -99,7 +99,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ## 🗂️ Cấu trúc thư mục
 ```text
-hotel-booking-demand-data-mining/
+student-alcohol-consumption-data-mining/
 │
 ├── README.md
 │
