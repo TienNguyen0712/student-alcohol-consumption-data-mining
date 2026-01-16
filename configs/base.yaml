@@ -1,20 +1,17 @@
 project:
-  name: hotel-booking-demand
-  random_state: 42
+  name: student-alcohol-consumption
+  random_state: 25
 
 paths:
-  raw_data: hotel_bookings.csv
-  processed_data: booking_clean.csv
-  reports: reports/BaoCao.pdf
+  raw_data: student_mat.csv, student_por.csv
+  reports: reports/Reports.pdf
 
 preprocessing:
   drop_columns:
-    - company
-    - agent
-    - reservation_status
-    - reservation_status_date
-  target: is_canceled
+    - 
+  target: G3
 
 split:
   test_size: 0.2
   stratify: true
+
