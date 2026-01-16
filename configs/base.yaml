@@ -1,0 +1,20 @@
+project:
+  name: hotel-booking-demand
+  random_state: 42
+
+paths:
+  raw_data: hotel_bookings.csv
+  processed_data: booking_clean.csv
+  reports: reports/BaoCao.pdf
+
+preprocessing:
+  drop_columns:
+    - company
+    - agent
+    - reservation_status
+    - reservation_status_date
+  target: is_canceled
+
+split:
+  test_size: 0.2
+  stratify: true

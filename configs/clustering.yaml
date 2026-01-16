@@ -1,0 +1,34 @@
+task: clustering
+
+features:
+  scale: true
+  columns:
+    - lead_time
+    - adr
+    - total_of_special_requests
+    - total_stay
+    - total_stay
+    - adr_per_guest
+    - total_guests
+    - season
+    - market_segment
+    - customer_type
+
+k_range: [3, 8]
+
+models:
+  kmeans:
+    - n_init=n_init
+    - max_iter=max_iter
+    - random_state=random_state
+    - algorithm: lloyd
+
+  minibatch_kmeans:
+    batch_size: 4096
+    n_init: 10
+
+evaluation:
+  metrics:
+    - silhouette
+    - elbow
+
