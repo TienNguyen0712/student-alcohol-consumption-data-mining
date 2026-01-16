@@ -10,15 +10,6 @@ models:
 
 
 
-  decision_tree:
-    criterion: gini       
-    max_depth: 8            
-    min_samples_split: 20   
-    min_samples_leaf: 10   
-    max_features: sqrt    
-    class_weight: balanced
-    random_state: 42
-
   random_forest:
     n_estimators: 300
     max_depth: 10
