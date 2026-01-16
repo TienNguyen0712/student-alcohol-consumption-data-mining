@@ -40,7 +40,13 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - **Số cột:** 
 - **Đối tượng:** Điểm só của những học sinh cấp hai của lớp **Toán** và **Tiếng Bồ Đào Nha**
 ### Một số thuộc tính quan trọng
-
+- **Thông tin cá nhân:** `sex`, `age`, `address`, `famsize`, `Pstatus`, `Medu`, `Fedu`, `Mjob`, `Fjob`
+- **Thông tin học tập:** `school`, `reason`, `guardian`
+- **Thông tin thời gian:** `traveltime`, `studytime`, `failures`
+- **Thông tin tài chính:** `schoolsup`, `famsup`, `paid`
+- **Thông tin sinh hoạt:** `activities`, `nursery`, `higher`, `internet`, `romantic` 
+- **Thông tin sức khỏe tinh thần:** `famrel`, `freetime`, `goout`, `Dalc`, `Walc`, `health`, `absences`
+- **Thông tin điểm số:** `G1`, `G2`, `G3`
 
 ---
 
