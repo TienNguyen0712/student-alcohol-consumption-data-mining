@@ -110,10 +110,13 @@ hotel-booking-demand-data-mining/
 |
 ├── data/
 │   ├── raw/
-│   │   └── hotel_bookings.csv
+│   │   ├── student_mat.csv  # Học sinh lớp Toán 
+│   │   └── student_por.csv  # Học ính lớp Tiếng Bồ
 │   └── processed/ 
-|       ├── hotel_booking_classification.csv # Bộ dữ liệu sử dụng cho phân loại 
-│       └── hotel_booking_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm
+|       ├── student_mat_classification.csv # Bộ dữ liệu sử dụng cho phân loại (Toán)
+|       ├── student_mat_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Toán)
+|       ├── student_por_classification.csv # Bộ dữ liệu sử dụng cho phân loại (Bồ)
+│       └── student_por_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Bồ)
 │
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
