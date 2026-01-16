@@ -4,15 +4,6 @@ features:
   scale: true
   columns:
     - lead_time
-    - adr
-    - total_of_special_requests
-    - total_stay
-    - total_stay
-    - adr_per_guest
-    - total_guests
-    - season
-    - market_segment
-    - customer_type
 
 k_range: [3, 8]
 
@@ -31,4 +22,5 @@ evaluation:
   metrics:
     - silhouette
     - elbow
+
 
