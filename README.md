@@ -62,8 +62,17 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
   - Với dữ liệu số học sinh nào có 2 môn thì lấy **trung bình** không thì bỏ qua
 - Với các cột điểm `G1`, `G2`, `G3` lấy **trung bình** với học sinh có cả hai môn, nếu chỉ có 1 môn thì lấy **điểm của môn đó**
 
-### 2️⃣ Phân tích mô tả (EDA) ✖️
-
+### 2️⃣ Phân tích mô tả (EDA) ✔️
+- Phân tích phân bố của biến mục tiêu (**G3**)
+- Quan sát mối quan hệ giữa các nhóm dến biến mục tiêu
+  - Học thuật (`G1`, `G2`, `failures`, ... )
+  - Sử dụng đồ cồn (`Dalc`, `Walc`)
+  - Gia đình / Xã hội (`famel`, `schoolsup`, ...)
+- Sử dụng các biểu đồ Histogram để quan sát phân bố
+- Scatter Plot để kiểm tra mối quan hệ
+- Boxplot để check ngoại lai
+- Heatmap để quan sát corrleration
+  
 ### 3️⃣ Huấn luyện mô hình ✖️
 
 ### 4️⃣ Đánh giá mô hình ✖️
