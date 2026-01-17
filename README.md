@@ -76,6 +76,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ### 🔹 Tuyến tính (Regression)
 **Mục tiêu:** Dự đoán khách điểm số cuối kỳ (G3) của học sinh  
+
 **Thuật toán:**
 - Linear Regression
 - Ridge / Lasso
