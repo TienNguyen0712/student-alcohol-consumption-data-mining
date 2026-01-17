@@ -75,7 +75,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 ## 🤖 Các kỹ thuật Khai phá dữ liệu được sử dụng
 
 ### 🔹 Tuyến tính (Regression)
-**Mục tiêu:** Dự đoán khách điểm số cuối kỳ (G3) của học sinh  
+**Mục tiêu:** Dự đoán điểm số cuối kỳ (G3) của học sinh  
 
 **Thuật toán:**
 - Linear Regression
