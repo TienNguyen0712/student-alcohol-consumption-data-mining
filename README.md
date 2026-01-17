@@ -21,7 +21,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 ### Mục tiêu
 - Áp dụng toàn bộ pipeline Khai phá dữ liệu:  
   **Tiền xử lý → Phân tích mô tả → Mô hình hóa → Đánh giá → Insight**
-- Thực nghiệm và so sánh nhiều thuật toán học máy (Phân loại - Phân cụm)
+- Thực nghiệm và so sánh nhiều thuật toán học máy (Tuyến tính - Phân cụm)
 - Rút ra insight có ý nghĩa cho bài toán điểm số học sinh
 
 ### Câu hỏi nghiên cứu
