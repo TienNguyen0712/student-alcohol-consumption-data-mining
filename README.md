@@ -37,7 +37,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 - **Tên:** Student Alcohol Consumption 
 - **Nguồn:** Public dataset ([Kaggle – dữ liệu nghiên cứu học thuật](https://www.kaggle.com/datasets/uciml/student-alcohol-consumption))
-- **Số dòng:** gồm hai bộ dữ liệu **Toán ~649 dòng** và **Tiếng Bồ Đào Nha ~349 dòng**
+- **Số dòng:** gồm hai bộ dữ liệu **Toán ~395 dòng** và **Tiếng Bồ Đào Nha ~649 dòng**
 - **Số cột:** 33 
 - **Đối tượng:** Điểm só của những học sinh cấp hai của lớp **Toán** và **Tiếng Bồ Đào Nha**
 ### Một số thuộc tính quan trọng
@@ -57,8 +57,10 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Bộ dữ liệu gồm 2 bảng **Toán** và **Tiếng Bồ Đào Nha**
 - Bộ dữ liệu không có dữ liệu thiếu hay trùng
 - Thực hiện gộp 2 bảng lại tạo bảng mới phục vụ quá trình huán luyện mô hình
-- Loại bỏ các giá trị không hợp lệ 
-- Loại bỏ các đặc trưng không hợp lệ
+- Loại bỏ các cột mới sinh ra sau khi gộp (`Dalc`, `Walc`, `freetime`, `goout`)
+ - Với dữ liệu phân loại ưu tiên lấy theo bảng **Toán** nếu không có thì lấy theo **Bồ**
+ - Vơi dữ liệu số học sinh nào có 2 môn thì lấy **trung bình** không thì bỏ qua
+- Với các cột điểm `G1`, `G2`, `G3` lấy trung bình với học sinh có cả hai môn, nếu chỉ có 1 môn thì lấy điểm của môn đó
 
 ### 2️⃣ Phân tích mô tả (EDA) ✖️
 
