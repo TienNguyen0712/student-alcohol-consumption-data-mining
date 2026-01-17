@@ -55,9 +55,9 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 ### 1️⃣ Tiền xử lý dữ liệu ✔️
 - Bộ dữ liệu gồm 2 bảng **Toán** và **Tiếng Bồ Đào Nha**
 - Bộ dữ liệu không có dữ liệu thiếu hay trùng
-- Thực hiện gộp 2 bảng lại tạo bảng mới để phục vụ quá trình huán luyện mô hình
+- Thực hiện gộp 2 bảng lại tạo bảng mới phục vụ quá trình huán luyện mô hình
 - Loại bỏ các giá trị không hợp lệ 
-  - Ngoại lai ở cột:
+- Loại bỏ các đặc trưng không hợp lệ
 
 ### 2️⃣ Phân tích mô tả (EDA) ✖️
 
