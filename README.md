@@ -25,10 +25,11 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Rút ra insight có ý nghĩa cho bài toán điểm số học sinh
 
 ### Câu hỏi nghiên cứu
-1. Các **yếu tố** nào ảnh hưởng tiêu cực đến điểm số học sinh ? 
-2. Có thể **phân cụm** thành các nhóm học sinh dựa theo đặc điểm hay không ?
-3. Các nhóm học sinh có những yếu tố nào thì có thể phân chúng về một nhóm  ?
-4. Ta có thể **phân loại** điểm số của những học sinh dược không ?
+1. Các **yếu tố** nào ảnh hưởng tiêu cực đến điểm số học sinh ?
+2. Liệu cồn hay gia đình có ảnh hưởng đến học sinh hay không
+3. Có thể **phân cụm** thành các nhóm học sinh dựa theo đặc điểm hay không ?
+4. Các nhóm học sinh có những yếu tố nào thì có thể phân chúng về một nhóm  ?
+5. Ta có thể **dự đoán** điểm số của những học sinh dược không ?
 
 ---
 
@@ -36,8 +37,8 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 - **Tên:** Student Alcohol Consumption 
 - **Nguồn:** Public dataset ([Kaggle – dữ liệu nghiên cứu học thuật](https://www.kaggle.com/datasets/uciml/student-alcohol-consumption))
-- **Số dòng:** ~
-- **Số cột:** 
+- **Số dòng:** gồm hai bộ dữ liệu **Toán ~649 dòng** và **Tiếng Bồ Đào Nha ~349 dòng**
+- **Số cột:** 33 
 - **Đối tượng:** Điểm só của những học sinh cấp hai của lớp **Toán** và **Tiếng Bồ Đào Nha**
 ### Một số thuộc tính quan trọng
 - **Thông tin cá nhân:** `sex`, `age`, `address`, `famsize`, `Pstatus`, `Medu`, `Fedu`, `Mjob`, `Fjob`
@@ -71,25 +72,23 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ## 🤖 Các kỹ thuật Khai phá dữ liệu được sử dụng
 
-### 🔹 Phân lớp (Classification)
-**Mục tiêu:** Dự đoán khách có hủy booking hay không  
+### 🔹 Tuyến tính (Regression)
+**Mục tiêu:** Dự đoán khách điểm số cuối kỳ (G3) của học sinh  
 **Thuật toán:**
-- Logistic Regression
-- KNN
-- SVM
-- Random Forest
-- XGBoost
+- Linear Regression
+- Ridge / Lasso
+- Random Forest Regressor
+- Gradient Boosting
 
 **Đánh giá:**
-- Accuracy
-- Precision / Recall
-- F1-score
-- Confusion Matrix
+- MAE
+- RMSE
+- R^2
 
 ---
 
 ### 🔹 Phân cụm (Clustering)
-**Mục tiêu:** Phân khúc khách hàng đặt phòng  
+**Mục tiêu:** Phân khúc học sinh theo điểm
 
 **Thuật toán:**
 - K-Means
@@ -115,7 +114,7 @@ student-alcohol-consumption-data-mining/
 │
 ├── configs/
 │   ├── base.yaml
-│   ├── classification.yaml  # Định nghĩa các cáu trúc phân loại 
+│   ├── regression.yaml  # Định nghĩa các cáu trúc phân loại 
 │   └── clustering.yaml      # Định nghĩa các cấu trúc phân cụm  
 |
 ├── data/
@@ -123,16 +122,16 @@ student-alcohol-consumption-data-mining/
 │   │   ├── student_mat.csv  # Học sinh lớp Toán 
 │   │   └── student_por.csv  # Học ính lớp Tiếng Bồ
 │   └── processed/ 
-|       ├── student_mat_classification.csv # Bộ dữ liệu sử dụng cho phân loại (Toán)
+|       ├── student_mat_regression.csv # Bộ dữ liệu sử dụng cho phân loại (Toán)
 |       ├── student_mat_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Toán)
-|       ├── student_por_classification.csv # Bộ dữ liệu sử dụng cho phân loại (Bồ)
+|       ├── student_por_regression.csv # Bộ dữ liệu sử dụng cho phân loại (Bồ)
 │       └── student_por_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Bồ)
 │
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
 │   ├── 02_preprocessing.ipynb
 │   ├── 03_eda.ipynb
-│   ├── 04_classification.ipynb
+│   ├── 04_regression.ipynb
 │   └── 05_clustering.ipynb
 │
 ├── reports/
