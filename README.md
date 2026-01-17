@@ -58,9 +58,9 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Bộ dữ liệu không có dữ liệu thiếu hay trùng
 - Thực hiện gộp 2 bảng lại tạo bảng mới phục vụ quá trình huán luyện mô hình
 - Loại bỏ các cột mới sinh ra sau khi gộp (`Dalc`, `Walc`, `freetime`, `goout`)
- - Với dữ liệu phân loại ưu tiên lấy theo bảng **Toán** nếu không có thì lấy theo **Bồ**
- - Vơi dữ liệu số học sinh nào có 2 môn thì lấy **trung bình** không thì bỏ qua
-- Với các cột điểm `G1`, `G2`, `G3` lấy trung bình với học sinh có cả hai môn, nếu chỉ có 1 môn thì lấy điểm của môn đó
+  - Với dữ liệu phân loại ưu tiên lấy theo bảng **Toán** nếu không có thì lấy theo **Bồ**
+  - Với dữ liệu số học sinh nào có 2 môn thì lấy **trung bình** không thì bỏ qua
+- Với các cột điểm `G1`, `G2`, `G3` lấy **trung bình** với học sinh có cả hai môn, nếu chỉ có 1 môn thì lấy **điểm của môn đó**
 
 ### 2️⃣ Phân tích mô tả (EDA) ✖️
 
@@ -116,18 +116,17 @@ student-alcohol-consumption-data-mining/
 │
 ├── configs/
 │   ├── base.yaml
-│   ├── regression.yaml  # Định nghĩa các cáu trúc phân loại 
+│   ├── regression.yaml      # Định nghĩa các cáu trúc tuyến tính
 │   └── clustering.yaml      # Định nghĩa các cấu trúc phân cụm  
 |
 ├── data/
 │   ├── raw/
 │   │   ├── student_mat.csv  # Học sinh lớp Toán 
 │   │   └── student_por.csv  # Học ính lớp Tiếng Bồ
-│   └── processed/ 
-|       ├── student_mat_regression.csv # Bộ dữ liệu sử dụng cho phân loại (Toán)
-|       ├── student_mat_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Toán)
-|       ├── student_por_regression.csv # Bộ dữ liệu sử dụng cho phân loại (Bồ)
-│       └── student_por_clustering.csv     # Bộ dữ liệu sử dụng cho phân cụm (Bồ)
+│   └── processed/
+|       ├── student_merge.csv               # Bộ dữ liệu gộp từ 2 bảng Toán và Bồ
+|       ├── student_merge_regression.csv    # Bộ dữ liệu sử dụng cho tuyến tính
+│       └── student_merge_clustering.csv    # Bộ dữ liệu sử dụng cho phân cụm
 │
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
