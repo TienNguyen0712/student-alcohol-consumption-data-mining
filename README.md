@@ -73,7 +73,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Boxplot để check ngoại lai
 - Heatmap để quan sát corrleration
   
-### 3️⃣ Huấn luyện mô hình ✖️
+### 3️⃣ Huấn luyện mô hình ✔️
 
 ### 4️⃣ Đánh giá mô hình ✖️
 
