@@ -26,7 +26,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ### Câu hỏi nghiên cứu
 1. Các **yếu tố** nào ảnh hưởng tiêu cực đến điểm số học sinh ?
-2. Liệu cồn hay gia đình có ảnh hưởng đến học sinh hay không
+2. Liệu cồn hay gia đình có ảnh hưởng đến học sinh hay không ?
 3. Có thể **phân cụm** thành các nhóm học sinh dựa theo đặc điểm hay không ?
 4. Các nhóm học sinh có những yếu tố nào thì có thể phân chúng về một nhóm  ?
 5. Ta có thể **dự đoán** điểm số của những học sinh dược không ?
