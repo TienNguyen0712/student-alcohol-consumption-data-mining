@@ -75,7 +75,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
   
 ### 3️⃣ Huấn luyện mô hình ✔️
 
-### 4️⃣ Đánh giá mô hình ✖️
+### 4️⃣ Đánh giá mô hình ✔️
 
 ### 5️⃣ Rút ra insight - ý nghĩa ✖️
 
