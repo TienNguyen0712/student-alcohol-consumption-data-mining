@@ -105,7 +105,6 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 **Thuật toán:**
 - K-Means
 - Hierarchical Clustering
-- DBSCAN 
 
 **Đánh giá:**
 - Elbow Method
