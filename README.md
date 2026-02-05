@@ -74,11 +74,31 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Heatmap để quan sát corrleration
   
 ### 3️⃣ Huấn luyện mô hình ✔️
+- **Tuyến tính**
+  - Thực hiện tiền xử lý dữ liệu với đặc trưng khác nhau
+    - _Liên tục_: Dùng **StandardScaler** nhằm chuẩn hóa một cách rõ ràng giúp cho mô hình không bị đánh giá sai
+    - _Phân loại_: Dùng **OneHotEncoder** nhằm chuẩn hóa các đặc trưng tránh gây hiểu lầm cho các mô hình tree-base
+  - Đặc trưng mục tiêu: **G3**
+- **Phân cụm**
+  - Thực hiện tiền xử lý thông qua các phương pháp đã làm trong tuyến tính
+  - Mục tiêu chính: **Phân cụm hành vi của học sinh theo mức độ sử dụng rượu**
+  - Các đặc trưng chính được lựa chọn gồm: _freetime_, _goout_, _Dalc_, _Walc_ những đặc trưng này góp phần nhìn rõ các mối quan hệ giữa các cụm và so sánh
 
 ### 4️⃣ Đánh giá mô hình ✔️
-
-### 5️⃣ Rút ra insight - ý nghĩa ✖️
-
+- **Tuyến tính**
+  - Đánh giá mô hình cho thấy **Ridge** có hiệu suất tốt nhất _(RMSE: 1.28)_
+  - Các đặc trưng có ảnh hưởng đến target gồm :`G1`, `G2`. `reason`, `activities`, `failures`
+- **Phân cụm**
+  - So sánh thông qua các mô hình phân cụm nhận thấy: **Kmean** là phù hợp nhất đối với bộ dữ liệu này
+  - Quá trình phân cụm và lựa chọn k thông qua phương pháp **Silhouette** và **Elbow** nhận thấy cụm phù hợp nhất là phân thành 2 cụm
+### 5️⃣ Rút ra insight - ý nghĩa ✔️
+- Các **yếu tố** ảnh hưởng tiêu cực đến điểm số học sinh bào gồm:
+ - Sử dụng rượu, khả năng vắng mặt ở mỗi buổi học, G1, G2, Thời gian rảnh, Các giá trị về thời gian học, ra ngoài
+ - Cồn có khả năng sẽ ảnh hướng đến điểm số của học sinh. Nhưng yếu tổ gia đình thì có ảnh hưởng đến chất lượng học tập _(Ist nhất là trong bộ dữ liệu )_  tuy nhiên không quá mạnh và chỉ có ảnh hưởng phần nào bởi trình độ giáo dục của người cha / mẹ
+- Hoàn toàn có thể **phân cụm** thành các nhóm học sinh dựa theo các đặc điểm về hành vi của các học sinh
+- Các nhóm học sinh có những yếu tố dưới đây thì có thể phân chúng về một nhóm:
+ - Thời gian học, thời gian rảnh, tình trạng sử dụng rượu, số lần vắng học
+- Ta có thể **dự đoán** điểm số của những học sinh bằng các mô hình học máy: **Ridge**
 ---
 
 ## 🤖 Các kỹ thuật Khai phá dữ liệu được sử dụng
@@ -114,6 +134,11 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ## 📊 Kết quả & Insight chính
 
+- Hoàn toàn có thể dự đoánh điểm số của học sinh bằng các mô hình Học máy
+- Rượu cũng như các yếu tố gia đình trình độ giáo dục cha mẹ có thể ảnh hưởng đến điểm số con cái (theo bộ dữ liệu)
+ - Nếu sử dụng rượu nhiều có khả năng kết quả học tập sẽ thấp và ngược lại  
+- Nếu ta học tốt ban đầu thì có thể điểm cuối kỳ của ta cũng sẽ tốt
+- Việc số buổi vắng học càng tăng thì có khả năng bạn sẽ sử dụng rượu cũng như bỏ trống thời gian vào những việc vô bổ khá nhiều  
 
 ---
 
@@ -163,7 +188,9 @@ student-alcohol-consumption-data-mining/
 ---
 
 ## ⚠️ Hạn chế & Hướng mở rộng
-
+- Dữ liệu đã quá lâu
+- Không thể áp dụng các kỹ thuật nâng cao
+- Dữ liệu là hành vi của con người nên không thể đưa ra cụm chính xác 
 
 ---
 
