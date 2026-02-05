@@ -1,0 +1,46 @@
+task: regression
+
+models:
+  linear_regression:
+    fit_intercept: True,
+    copy_X: True,
+    n_jobs: None,
+    positive: Falsebalanced
+
+
+  
+  ridge:
+    alpha: 4.89,
+    fit_intercept: True,
+    solver: 'auto',
+
+
+  lasso:
+    alpha: 1.0,
+    max_iter: 1000,
+    selection: 'cyclic'
+
+
+  random_forest:
+    n_estimators: 300,
+    max_depth: 5,
+    min_samples_leaf: 10,
+    max_features: "sqrt",
+    n_jobs: -1
+
+
+  gradient_boosting_regressor:
+    learning_rate: 0.05,
+    n_estimators: 300,
+    max_depth: 3,
+    subsample: 0.8,
+    min_samples_leaf: 10,
+
+evaluation:
+  metrics:
+    - mae
+    - rmse
+    - r^2
+
+
+
