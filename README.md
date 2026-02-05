@@ -21,7 +21,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 ### Mục tiêu
 - Áp dụng toàn bộ pipeline Khai phá dữ liệu:  
   **Tiền xử lý → Phân tích mô tả → Mô hình hóa → Đánh giá → Insight**
-- Thực nghiệm và so sánh nhiều thuật toán học máy (Tuyến tính - Phân cụm)
+- Thực nghiệm và so sánh nhiều thuật toán học máy (Hồi quy - Phân cụm)
 - Rút ra insight có ý nghĩa cho bài toán điểm số học sinh
 
 ### Câu hỏi nghiên cứu
@@ -74,7 +74,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Heatmap để quan sát corrleration
   
 ### 3️⃣ Huấn luyện mô hình ✔️
-- **Tuyến tính**
+- **Hồi quy**
   - Thực hiện tiền xử lý dữ liệu với đặc trưng khác nhau
     - _Liên tục_: Dùng **StandardScaler** nhằm chuẩn hóa một cách rõ ràng giúp cho mô hình không bị đánh giá sai
     - _Phân loại_: Dùng **OneHotEncoder** nhằm chuẩn hóa các đặc trưng tránh gây hiểu lầm cho các mô hình tree-base
@@ -85,7 +85,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
   - Các đặc trưng chính được lựa chọn gồm: _freetime_, _goout_, _Dalc_, _Walc_ những đặc trưng này góp phần nhìn rõ các mối quan hệ giữa các cụm và so sánh
 
 ### 4️⃣ Đánh giá mô hình ✔️
-- **Tuyến tính**
+- **Hồi quy**
   - Đánh giá mô hình cho thấy **Ridge** có hiệu suất tốt nhất _(RMSE: 1.28)_
   - Các đặc trưng có ảnh hưởng đến target gồm :`G1`, `G2`. `reason`, `activities`, `failures`
 - **Phân cụm**
@@ -103,7 +103,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 ## 🤖 Các kỹ thuật Khai phá dữ liệu được sử dụng
 
-### 🔹 Tuyến tính (Regression)
+### 🔹 Hồi quy (Regression)
 **Mục tiêu:** Dự đoán điểm số cuối kỳ (G3) của học sinh  
 
 **Thuật toán:**
@@ -137,6 +137,7 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 - Hoàn toàn có thể dự đoánh điểm số của học sinh bằng các mô hình Học máy
 - Rượu cũng như các yếu tố gia đình trình độ giáo dục cha mẹ có thể ảnh hưởng đến điểm số con cái (theo bộ dữ liệu)
  - Nếu sử dụng rượu nhiều có khả năng kết quả học tập sẽ thấp và ngược lại  
+ - **Tuy nhiên** có thể do học kém mà học sinh sử dụng rượu nhiều hơn 
 - Nếu ta học tốt ban đầu thì có thể điểm cuối kỳ của ta cũng sẽ tốt
 - Việc số buổi vắng học càng tăng thì có khả năng bạn sẽ sử dụng rượu cũng như bỏ trống thời gian vào những việc vô bổ khá nhiều  
 
@@ -188,9 +189,11 @@ student-alcohol-consumption-data-mining/
 ---
 
 ## ⚠️ Hạn chế & Hướng mở rộng
-- Dữ liệu đã quá lâu
+- Dữ liệu đã quá lâu và cỡ mẫu để thu thập quá nhỏ
 - Không thể áp dụng các kỹ thuật nâng cao
-- Dữ liệu là hành vi của con người nên không thể đưa ra cụm chính xác 
+- Dữ liệu là hành vi của con người nên không thể đưa ra cụm chính xác
+- Chưa loại bỏ việc dữ liệu bị rỏ rỉ bởi cho thấy G3 có mối quan hệ chặt chẽ với G1
+- Nếu ta loại bỏ G1 và G2 thì sao 
 
 ---
 
