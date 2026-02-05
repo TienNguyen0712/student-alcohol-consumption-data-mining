@@ -1,5 +1,7 @@
 task: regression
 
+target: G3
+
 models:
   linear_regression:
     fit_intercept: True,
@@ -41,6 +43,7 @@ evaluation:
     - mae
     - rmse
     - r^2
+
 
 
 
