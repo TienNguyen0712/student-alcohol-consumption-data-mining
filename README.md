@@ -136,8 +136,8 @@ Trong bối cảnh thế hệ trẻ đang ngày càng có vai trò quan trọng 
 
 - Hoàn toàn có thể dự đoánh điểm số của học sinh bằng các mô hình Học máy
 - Rượu cũng như các yếu tố gia đình trình độ giáo dục cha mẹ có thể ảnh hưởng đến điểm số con cái (theo bộ dữ liệu)
- - Nếu sử dụng rượu nhiều có khả năng kết quả học tập sẽ thấp và ngược lại  
- - **Tuy nhiên** có thể do học kém mà học sinh sử dụng rượu nhiều hơn 
+  - Nếu sử dụng rượu nhiều có khả năng kết quả học tập sẽ thấp và ngược lại  
+  - **Tuy nhiên** có thể do học kém mà học sinh sử dụng rượu nhiều hơn 
 - Nếu ta học tốt ban đầu thì có thể điểm cuối kỳ của ta cũng sẽ tốt
 - Việc số buổi vắng học càng tăng thì có khả năng bạn sẽ sử dụng rượu cũng như bỏ trống thời gian vào những việc vô bổ khá nhiều  
 
